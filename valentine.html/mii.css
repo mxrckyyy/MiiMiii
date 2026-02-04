@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.App {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.floating-hearts-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    padding: 2rem;
+}
+
+.intro-text {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.question-container {
+    margin-bottom: 3rem;
+}
+
+.main-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.begging-message {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    min-height: 2rem;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 100;
+}
+
+.yes-button,
+.no-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.yes-button {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    position: relative;
+    z-index: 50;
+}
+
+.yes-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+}
+
+.no-button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    position: relative;
+    z-index: 51;
+}
+
+.no-button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.success-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 20;
+    overflow-y: auto;
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 30;
+}
+
+.music-control:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#floatingHeartsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.kiss-emoji {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.success-message {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.video-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.photos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.photo-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    height: 300px;
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.personal-message {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 3rem auto;
+    color: white;
+}
+
+.message-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.message-content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.heart {
+    position: fixed;
+    font-size: 2rem;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .main-question {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+
+    .buttons-container {
+        gap: 1rem;
+    }
+
+    .yes-button,
+    .no-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .success-container {
+        padding: 5rem 1rem 1rem 1rem;
+    }
+
+    .video-container {
+        padding: 1rem;
+    }
+
+    .photos-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .photo-item {
+        height: 250px;
+    }
+}

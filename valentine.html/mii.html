@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiiMii 💘</title>
+    <link rel="stylesheet" href="mii.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="App">
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4a828c1b57.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="floating-hearts-bg" id="floatingHeartsBg"></div>
+
+        <div class="main-container" id="mainContainer">
+            <div class="intro-text">To the most amazing Beautiful Girl in my life...</div>
+            <div class="question-container">
+                <h1 class="main-question">Will you be my Valentine? 💘</h1>
+                <div class="begging-message" id="beggingMessage"></div>
+            </div>
+            <div class="buttons-container">
+                <button class="yes-button" id="yesButton">YES 💖</button>
+                <button class="no-button" id="noButton">NO 😢</button>
+            </div>
+        </div>
+
+        <div class="success-container" id="successContainer" style="display: none;">
+            <button class="music-control" id="musicToggle">🔊</button>
+            <div id="floatingHeartsContainer"></div>
+            <div class="kiss-emoji">😘</div>
+            <div class="success-message">Yay! You made me the happiest! 😊💕</div>
+            
+            <!-- VIDEO SECTION -->
+            <div class="video-container">
+                <h2 class="video-title">Watch Our Special Moment 💕</h2>
+                <div class="video-wrapper">
+                    <video class="video-player" controls>
+                        <source src="miii0.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- PHOTOS SECTION - 3 PHOTOS -->
+            <div class="photos-container">
+                <div class="photo-item">
+                    <img src="miii7.jpg" alt="Our Memory 1"/>
+                </div>
+                <div class="photo-item">
+                    <img src="miii1.jpg" alt="Our Memory 2"/>
+                </div>
+                <div class="photo-item">
+                    <img src="mimiiiii.jpg" alt="Our Memory 3"/>
+                </div>
+            </div>
+
+            <!-- PERSONAL MESSAGE -->
+            <div class="personal-message">
+                <div class="message-title">A Message From My Heart</div>
+                <div class="message-content">
+                    Every moment with you feels like magic. Your smile lights up my world, 
+                     your laugh is my favorite sound. I'm so grateful for every second we spend together.
+                      You make every day brighter, and I can't imagine my life without you in it. 
+                      Will you be my Valentine and make this day (and every day) special? I promise to cherish you
+                      , make you smile, and love you with all my heart. ❤️
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mii.js"></script>
+</body>
+</html>
